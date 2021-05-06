@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed May  5 11:53:18 2021
+# Process ID: 21120
+# Current directory: C:/Tutorials/Vivado/simple_RO
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12904 C:\Tutorials\Vivado\simple_RO\simple_RO.xpr
+# Log file: C:/Tutorials/Vivado/simple_RO/vivado.log
+# Journal file: C:/Tutorials/Vivado/simple_RO\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Tutorials/Vivado/simple_RO/simple_RO.xpr
+update_compile_order -fileset sources_1
+open_run synth_1 -name synth_1
+close_design
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_bd_design {C:/Tutorials/Vivado/simple_RO/simple_RO.srcs/sources_1/bd/design_1/design_1.bd}
+write_bd_tcl -force C:/Tutorials/Vivado/simple_RO/design_1.tcl
+open_bd_design {C:/Tutorials/Vivado/simple_RO/simple_RO.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.num_blocks {32}] [get_bd_cells heater]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+refresh_design
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_bd_design {C:/Tutorials/Vivado/simple_RO/simple_RO.srcs/sources_1/bd/design_1/design_1.bd}
+write_bd_tcl -force C:/Tutorials/Vivado/simple_RO/design_1.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+startgroup
+set_property -dict [list CONFIG.num_blocks {56} CONFIG.block_size {48}] [get_bd_cells heater]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1

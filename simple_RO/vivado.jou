@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed May  5 16:36:45 2021
+# Process ID: 18084
+# Current directory: C:/Tutorials/Vivado/simple_RO
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16592 C:\Tutorials\Vivado\simple_RO\simple_RO.xpr
+# Log file: C:/Tutorials/Vivado/simple_RO/vivado.log
+# Journal file: C:/Tutorials/Vivado/simple_RO\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Tutorials/Vivado/simple_RO/simple_RO.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Tutorials/Vivado/simple_RO/simple_RO.srcs/sources_1/bd/design_1/design_1.bd}
+write_bd_tcl -force C:/Tutorials/Vivado/simple_RO/design_1.tcl
+startgroup
+set_property -dict [list CONFIG.OT_ALARM {false} CONFIG.USER_TEMP_ALARM {false}] [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_run impl_1
+open_bd_design {C:/Tutorials/Vivado/simple_RO/simple_RO.srcs/sources_1/bd/design_1/design_1.bd}
+open_project C:/Users/quant/ring_oscillator_zynq/simple_ro/simple_ro.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/quant/ring_oscillator_zynq/simple_ro/simple_ro.srcs/sources_1/bd/design_1/design_1.bd}
+current_project simple_RO
+startgroup
+set_property -dict [list CONFIG.OT_ALARM {true} CONFIG.USER_TEMP_ALARM {true} CONFIG.TEMPERATURE_ALARM_TRIGGER {124.9} CONFIG.TEMPERATURE_ALARM_RESET {124.9} CONFIG.TEMPERATURE_ALARM_OT_TRIGGER {124.9} CONFIG.TEMPERATURE_ALARM_OT_RESET {124.9}] [get_bd_cells xadc_wiz_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+current_project simple_ro
+close_project
+set_property name Temp_sensor [get_bd_cells xadc_wiz_0]

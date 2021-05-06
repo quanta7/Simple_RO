@@ -1,0 +1,139 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed May  5 10:37:48 2021
+# Process ID: 20068
+# Current directory: C:/Tutorials/Vivado/simple_RO_post_stress
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18696 C:\Tutorials\Vivado\simple_RO_post_stress\simple_RO_post_stress.xpr
+# Log file: C:/Tutorials/Vivado/simple_RO_post_stress/vivado.log
+# Journal file: C:/Tutorials/Vivado/simple_RO_post_stress\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/quant/ring_oscillator_zynq/Self_heating/AXI4_heater_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Tutorials/Vivado/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 1197.906 ; gain = 0.000
+open_bd_design {C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:user:AXI_RO:1.0 - RO0
+Adding component instance block -- xilinx.com:user:AXI_RO:1.0 - RO2
+Adding component instance block -- xilinx.com:user:AXI_RO:1.0 - RO1
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding component instance block -- xilinx.com:ip:xadc_wiz:3.3 - xadc_wiz_0
+Successfully read diagram <design_1> from BD file <C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1284.504 ; gain = 86.598
+update_compile_order -fileset sources_1
+close [ open C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.srcs/constrs_1/new/constraints_2.xdc w ]
+add_files -fileset constrs_1 C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.srcs/constrs_1/new/constraints_2.xdc
+export_ip_user_files -of_objects  [get_files C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.srcs/constrs_1/new/constraints.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.srcs/constrs_1/new/constraints.xdc
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+[Wed May  5 11:09:59 2021] Launched synth_1...
+Run output will be captured here: C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.runs/synth_1/runme.log
+[Wed May  5 11:09:59 2021] Launched impl_1...
+Run output will be captured here: C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+startgroup
+set_property -dict [list CONFIG.num_oscillators {18}] [get_bd_cells RO0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.num_oscillators {18}] [get_bd_cells RO1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.num_oscillators {18}] [get_bd_cells RO2]
+endgroup
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+reset_run design_1_AXI_RO_0_0_synth_1
+reset_run design_1_AXI_RO_1_0_synth_1
+reset_run design_1_AXI_RO_0_1_synth_1
+save_bd_design
+Wrote  : <C:\Tutorials\Vivado\simple_RO_post_stress\simple_RO_post_stress.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+launch_runs impl_1 -jobs 4
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+Wrote  : <C:\Tutorials\Vivado\simple_RO_post_stress\simple_RO_post_stress.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RO0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RO2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block RO1 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = f514e6d9faf76bfb; cache size = 4.663 MB.
+[Wed May  5 11:11:18 2021] Launched design_1_AXI_RO_0_0_synth_1, design_1_AXI_RO_1_0_synth_1, design_1_AXI_RO_0_1_synth_1, synth_1...
+Run output will be captured here:
+design_1_AXI_RO_0_0_synth_1: C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.runs/design_1_AXI_RO_0_0_synth_1/runme.log
+design_1_AXI_RO_1_0_synth_1: C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.runs/design_1_AXI_RO_1_0_synth_1/runme.log
+design_1_AXI_RO_0_1_synth_1: C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.runs/design_1_AXI_RO_0_1_synth_1/runme.log
+synth_1: C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.runs/synth_1/runme.log
+[Wed May  5 11:11:18 2021] Launched impl_1...
+Run output will be captured here: C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1384.062 ; gain = 35.113
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.129 . Memory (MB): peak = 1396.445 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 937 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.695 . Memory (MB): peak = 2102.859 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.695 . Memory (MB): peak = 2102.859 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2102.859 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 54 instances were transformed.
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 54 instances
+
+open_run: Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 2236.887 ; gain = 852.824
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+[Wed May  5 11:16:18 2021] Launched synth_1...
+Run output will be captured here: C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.runs/synth_1/runme.log
+[Wed May  5 11:16:18 2021] Launched impl_1...
+Run output will be captured here: C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Tutorials/Vivado/simple_RO_post_stress/simple_RO_post_stress.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.129 . Memory (MB): peak = 2487.207 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 937 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.669 . Memory (MB): peak = 2487.207 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.670 . Memory (MB): peak = 2487.207 ; gain = 0.000
+refresh_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2487.207 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed May  5 11:26:22 2021...

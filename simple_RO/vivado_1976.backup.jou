@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed May  5 09:44:37 2021
+# Process ID: 1976
+# Current directory: C:/Tutorials/Vivado/simple_RO
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16732 C:\Tutorials\Vivado\simple_RO\simple_RO.xpr
+# Log file: C:/Tutorials/Vivado/simple_RO/vivado.log
+# Journal file: C:/Tutorials/Vivado/simple_RO\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Tutorials/Vivado/simple_RO/simple_RO.xpr
+update_compile_order -fileset sources_1
+open_run impl_1
