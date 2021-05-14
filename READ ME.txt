@@ -1,0 +1,24 @@
+This compressed folder contains 3 folders: "ip_repo", "parvez_ro_during" and "parvez_ro_prepost"
+
+"ip_repo"
+1. Contains many IPs out of which only 3 are important: "AXI_BIT_1.0", "AXI_BTI_2_1.0" and "AXI_RO_1.0"
+	a. "AXI_RO_1.0": IP for normal ROs
+	b. "AXI_BTI_1.0": IP for open loop chain of inverters with input of 1st stage being low.
+	c. "AXI_BTI_2_1.0": IP for open loop chain of inverters with input of 1st stage being high.
+
+"parvez_ro_prepost"
+1. Vivado project for measuring frequency of all the ROs (including the only_BTI stress ckts which are normal ROs for this project)
+2. RO0, RO3 and RO4 in the block design are normal ROs.
+3. RO1 and RO2 are also normal ROs for frequency measurement only. When we move onto the "parvez_ro_during"
+   these RO1 and RO2 get replaced with BTI0 and BTI1 circuits. That's why if you see the constraints files
+   for RO1 and RO2 LUTs, you'll find their locations to be exactly same as of the BTI0 and BTI1 circuits.
+4. When you open the project on your system, the IP repository location needs to be modified to the its new location.
+
+"parvez_ro_during"
+1. Vivado project for measuring frequency of all the ROs (excluding the only_BTI stress ckts which are open loop chain of inverters)
+2. RO0, RO3 and RO4 in the block design are normal ROs.
+3. BTI0 and BTI1 have the taken the place of RO1 and RO2 (from "parvez_ro_prepost project).
+4. BTI0 and BTI1 won't be oscillating during the stress.
+5. When you open the project on your system, the IP repository location needs to be modified to the its new location.
+
+**Note: BTI0 and BTI1 are NOT BTI sensors. They are just open loop chain of inverters with a constant input voltage of 0 and 1, respectively.
